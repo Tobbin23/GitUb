@@ -52,8 +52,7 @@ def start_GitUb():
         print(E)
  
         
-def config(**kwargs):
-    print(kwargs)    
+   
 if __name__=="__main__":
     try:
         start_GitUb()
