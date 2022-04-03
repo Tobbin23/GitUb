@@ -3,9 +3,12 @@ from barvy import Barvy
 from os import system
 from Git import Mo
 
-
+#https://linuxconfig.org/how-to-perform-http-requests-with-python-part-2-the-request-library
 class GitUb(Cmd):
-    
+    print("""
+     ^    ^    ^    ^    ^  
+    /G\  /i\  /t\  /U\  /b\ 
+   <___><___><___><___><___> \n""")
     def do_set(self, uzivate ):
         
         if len(uzivate) < 0:
@@ -25,7 +28,8 @@ class GitUb(Cmd):
     
         except ConnectionAbortedError as f:
             print(f)"""
-
+       
+        #GitUb.do_clone(clone=uzivate)
         Mo.se_t(jmeno=uzivate)
         
         
@@ -33,17 +37,26 @@ class GitUb(Cmd):
         #print(Mo.ret(a=konfig))
         
         print(Mo.lis(uprava=konfig))
+        #Mo.nazev_slozky.append(konfig)
     
     def do_exit(self, exit):
         Cmd(exit)
         return True
     def do_clear(self, clear):
         system("clear")
-
+        
+        
+    def do_clone(self,cislo:int):
+        # k ceste paracovniho adresare prida slozku Reposits
+        if not cislo:
+            Mo.clon(radek=None)
+        
+        
 def start_GitUb():
     try:
         start = GitUb()
         start.prompt = "\033[1;31mGitUb\033[0m > "
+        
         start.cmdloop()
     except KeyboardInterrupt as K:
         print(k)
@@ -52,7 +65,8 @@ def start_GitUb():
         print(E)
  
         
-   
+def config(**kwargs):
+    print(kwargs)    
 if __name__=="__main__":
     try:
         start_GitUb()
