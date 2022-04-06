@@ -2,7 +2,7 @@ from requests import get
 import json
 import os
 from barvy import Barvy
-from prace_souboru import cesta
+from spravce import cesta
 #print(os.path.dirname(os.path.realpath(__file__)))
 """
 vytisk .json s pouziti pandas DataFrame
@@ -52,7 +52,7 @@ class Mo:
             adresa = get(f"https://api.github.com/users/{jmeno}/repos")
             if adresa.status_code == 200:
                 print("Spojení %s %d " % (Barvy.OK, adresa.status_code))
-                Mo.nazev_slozky += jmeno
+                #Mo.nazev_slozky += jmeno
                 load = adresa.json()
                 for i in range(0, len(load)):
                     i + 1
@@ -73,14 +73,23 @@ class Mo:
             dec = json.loads(data)
             
             #https://from-locals.com/python-file-path/
-         
+            
             try:
-                for i in range(0, len(dec)):
-                   
-                    print("\n")
+                if a:
+                    for i in range(0, len(dec)):
                     
-                    print("\t",dec[i][a])
-                
+                        print("\n")
+                        
+                        print("\t",dec[i][a])
+                else:
+                    for i in range(0, len(dec)):
+                        
+                        print("Project number: ", i+1)
+                        print("====\n")
+                        print("reposit name: ",dec[i]["description"])
+                        print("clone: ",dec[i]["clone_url"])
+                        print("Language: ", dec[i]["language"])
+                        print("reposit velikost: ",dec[i]["size"]/1024,"Mb")                
             except KeyError:
                 pass
                 
@@ -91,6 +100,8 @@ class Mo:
             dec = json.loads(data)
             vypis.close()
             seznam = []
+            
+            Mo.nazev_slozky += dec[0]["owner"]["login"]
             
             for x in range(0, len(dec)):
                 seznam.append(dec[x]["clone_url"])            
@@ -132,7 +143,7 @@ class Mo:
     def lis(uprava):
         mezery = uprava.split()
         I_data = []
-        return [Mo.ret(x) for x in mezery]
+        return [Mo.ret(a=x) for x in mezery]
     """
     for i in range(len(uprava)):
     if len(uprava) < 1:

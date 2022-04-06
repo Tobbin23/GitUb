@@ -35,9 +35,11 @@ class GitUb(Cmd):
         
     def do_uset(self, konfig):
         #print(Mo.ret(a=konfig))
-        
-        print(Mo.lis(uprava=konfig))
-        #Mo.nazev_slozky.append(konfig)
+        if konfig in "":
+            Mo.ret(a="")
+        else:
+            print(Mo.lis(uprava=konfig))
+            #Mo.nazev_slozky.append(konfig)
     
     def do_exit(self, exit):
         Cmd(exit)
