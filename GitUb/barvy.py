@@ -1,0 +1,10 @@
+class Barvy:
+    OK = "\033[92m"
+    WARNING = "\033[93m" 
+    FAIL = "\033[91m" 
+    RESET = "\033[0m"  
+    BLUE = "\033[94m"
+    BOLD = "\033[1m"
+    UNDLINE =  "\033[4m"
+    HEAD = "\033[95m"
+    Yellow="\033[93m"

@@ -2,13 +2,10 @@ from cmd import Cmd
 from barvy import Barvy
 from os import system
 from Git import Mo
-
+from autor import logo
 #https://linuxconfig.org/how-to-perform-http-requests-with-python-part-2-the-request-library
 class GitUb(Cmd):
-    print("""
-     ^    ^    ^    ^    ^  
-    /G\  /i\  /t\  /U\  /b\ 
-   <___><___><___><___><___> \n""")
+    
     def do_set(self, uzivate ):
         
         if len(uzivate) < 0:
@@ -51,17 +48,17 @@ class GitUb(Cmd):
     def do_clone(self,cislo:int):
         # k ceste paracovniho adresare prida slozku Reposits
         if not cislo:
-            Mo.clon(radek=None)
+            Mo.clon()
         
         
 def start_GitUb():
     try:
         start = GitUb()
         start.prompt = "\033[1;31mGitUb\033[0m > "
-        
+        start.intro = logo()
         start.cmdloop()
     except KeyboardInterrupt as K:
-        print(k)
+        print(K)
         
     except KeyError as E:
         print(E)

@@ -75,6 +75,9 @@ class Mo:
             #https://from-locals.com/python-file-path/
             
             try:
+                
+                Mo.nazev_slozky += dec[0]["owner"]["login"]
+                
                 if a:
                     for i in range(0, len(dec)):
                     
@@ -94,27 +97,27 @@ class Mo:
                 pass
                 
             
-    def clon(radek:int):
+    def clon():
         with open("test.json", mode="r", encoding="utf-8") as vypis:
             data = vypis.read()
             dec = json.loads(data)
             vypis.close()
             seznam = []
             
-            Mo.nazev_slozky += dec[0]["owner"]["login"]
+            #Mo.nazev_slozky += dec[0]["owner"]["login"]
             
             for x in range(0, len(dec)):
                 seznam.append(dec[x]["clone_url"])            
             
             for i in range(len(seznam)):
                 print("{cislo}) {hodnota}".format(cislo=i,hodnota=seznam[i]))
-             
+            
             try:
                 volba = int(input("cisl:"))
-                if volba != '' or volba != ' ':
-                    for radky in seznam[volba]:
-                        sz = seznam[volba]
-                    cesta(nazev=Mo.nazev_slozky, reposit=sz)
+                    
+                for radky in seznam[volba]:
+                    sz = seznam[volba]  
+                cesta(nazev=Mo.nazev_slozky, reposit=sz)
             except ValueError:
                 pass
             
