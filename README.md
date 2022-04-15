@@ -23,3 +23,4 @@ python3 GitUb.py
 Pokud mě chcete podpořit a přitom i získat 10$ v BTC použijte prosím tento referrl link:
 <h4>Coinbase<h4/>
 <a href ="https://www.coinbase.com/join/szava_j?src=android-link">Coinbase<a>
+[Coinbase](https://www.coinbase.com/join/szava_j?src=android-link)
