@@ -35,9 +35,10 @@ Pokud mě chcete podpořit a přitom i získat 10$ v BTC použijte prosím tento
 Nebo přímo poslat crpyto na peněženku:
 | Crpytoměny | Adresa |
 | --- | --- |
-| Bitcoin (BTC) | img src="https://user-images.githubusercontent.com/67708830/163583376-c3c61675-0204-4b3d-9610-895442895473.jpeg" |
+| Bitcoin (BTC) | https://user-images.githubusercontent.com/67708830/163583376-c3c61675-0204-4b3d-9610-895442895473.jpeg |
 
-| Ethereum (ETH) |
+| Ethereum (ETH) |https://user-images.githubusercontent.com/67708830/163583741-d4f3ee25-f213-40e5-927e-b6eef941a087.jpeg |
+
 | Litecoin (LTC) |
 | Algorand (ALGO) | 
 
