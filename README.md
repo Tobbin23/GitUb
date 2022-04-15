@@ -1,4 +1,4 @@
-<h1> GitUb</h1>
+<h1 align="center"> GitUb</h1>
 
 <p> GitUb slouží pro získání informací účtu uživatele na github.com</p>
 <p> Rychlejší stahování souborů na místo ručního stahování</p>
