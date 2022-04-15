@@ -2,7 +2,7 @@
 
  <p>GitUb slouží pro získání informací účtu uživatele na github.com<br>
   Rychlejší stahování souborů na místo ručního stahování<br>
-  Nelze však zobrazit zdrojový kód před stažením
+  Nelze však zobrazit zdrojový kód před stažením<br>
   Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb</br></p>
 
 #### Stažení:
