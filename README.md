@@ -24,7 +24,7 @@ python3 GitUb.py
 <h4> uset </h4>
 <p>S argumenty vytiskne požedované hodnoty</p>
 
-![](https://github.com/Tobbin23/GitUb/blob/main/GitUb/screeshot/uset_argument.png)
+![](https://github.com/Tobbin23/GitUb/blob/main/GitUb/screeshot/uset_argument.png){ width=60%,height:30px}
 
 *Veškeré stažené soubory naleznete ve složce Reposits
 
