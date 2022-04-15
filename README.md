@@ -11,6 +11,7 @@ git clone https://github.com/Tobbin23/GitUb.git
 cd GitUb
 python3 GitUb.py
 ```
+<div style=""width:100x ; height:100x">
 ![hlavni](https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png)
 
 <h4> Help </h4>
