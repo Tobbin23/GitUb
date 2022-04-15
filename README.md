@@ -2,8 +2,8 @@
 
  <p>GitUb slouží pro získání informací účtu uživatele na github.com</p>
  <p>Rychlejší stahování souborů na místo ručního stahování</p>
- <p>Nelze však zobrazit zdrojový kód před stažením</p><br>
- <p>Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb</p>
+ <p>Nelze však zobrazit zdrojový kód před stažením<br>
+ Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb</p>
 
 #### Stažení:
 ```bash
