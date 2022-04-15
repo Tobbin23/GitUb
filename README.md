@@ -17,7 +17,7 @@ python3 GitUb.py
 
 <img src="https://user-images.githubusercontent.com/67708830/163555712-82bf35e7-f967-42ef-a059-00893a376410.png" width="520"/>
 
-*
+*Veškeré stažené soubory naleznete ve složce Reposits
 
 
 Pokud mě chcete podpořit a přitom i získat 10$ v BTC použijte prosím tento referrl link:
