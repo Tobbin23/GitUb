@@ -17,6 +17,15 @@ python3 GitUb.py
 
 <img src="https://user-images.githubusercontent.com/67708830/163555712-82bf35e7-f967-42ef-a059-00893a376410.png" width="520"/>
 
+<h4> uset</h4>
+<p>Bez argumentu vytiskne základní výpis</p>
+<img src="https://user-images.githubusercontent.com/67708830/163577883-2739e856-81a2-4b83-bbd7-722891c97657.png" width="520"/>
+
+<h4> uset </h4>
+<p>S argumenty vytiskne požedované hodnoty</p>
+<img src="https://user-images.githubusercontent.com/67708830/163579969-d5a52681-ddaa-4ebf-8a29-040354097f87.png"
+width="520"/>
+
 *Veškeré stažené soubory naleznete ve složce Reposits
 
 
