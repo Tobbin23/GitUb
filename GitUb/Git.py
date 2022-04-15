@@ -1,155 +1,130 @@
+#!/usr/bin/python3
+"""
+autor Tobbin23
+"""
 from requests import get
 import json
 import os
+import sys
 from barvy import Barvy
 from spravce import cesta
-#print(os.path.dirname(os.path.realpath(__file__)))
+from autor import logo_b
+from user_agent import user
 """
-vytisk .json s pouziti pandas DataFrame
-https://www.educba.com/python-print-table/
-return if/else https://stackoverflow.com/questions/62014493/if-statement-and-return-python
-https://codereview.stackexchange.com/questions/75432/clone-github-repository-using-python
-https://www.programiz.com/python-programming/nested-dictionary
-https://stackoverflow.com/questions/8713596/how-to-retrieve-the-list-of-all-github-repositories-of-a-person
-https://www.datacamp.com/community/tutorials/making-http-requests-in-python
-https://www.codeunderscored.com/how-to-use-json-in-python-to-access-github-api/
 Vytrorit script pro jednodusi stahovani programu z github.
 misto manualniho otevirani stranek a klikani na copy reposit.
 Vyzada si uzivatelske jmeno a reposit daneho autora a programu.
 nasledne ho potvrdi a stahne pomoci git clone <url>.
 """
-def funkcni():
-    username = str(input("username: "))
 
-    
-    url = f"https://api.github.com/users/{username}/repos"
-    repos = []
-    r = get(url)
-    load = r.json()
-    for i in range(0, len(load)):
-        
-        print("Project number: ", i+1)
-        print("====\n")
-        print("reposit name: ",load[i]["description"])
-        print("clone: ",load[i]["clone_url"])
-        print("Language: ", load[i]["language"])
-        print("reposit velikost: ",load[i]["size"]/1024,"Mb")
-       
-
-        
 class Mo:
-    #for k, v in load[i].items():
-    #return f"{Barvy.BLUE}{a}{Barvy.HEAD}"    
-    #slovnik = {}
-    
+
     nazev_slozky = ""
     
-    #global slk
-    #slk = slovnik
-    
+    # 
     def se_t(jmeno):
         try:
-            adresa = get(f"https://api.github.com/users/{jmeno}/repos")
+            adresa = get(f"https://api.github.com/users/{jmeno}/repos",headers=user())
             if adresa.status_code == 200:
-                print("Spojení %s %d " % (Barvy.OK, adresa.status_code))
-                #Mo.nazev_slozky += jmeno
+                print("\tSpojení %s %d " % (Barvy.OK, adresa.status_code))
+                
                 load = adresa.json()
                 for i in range(0, len(load)):
                     i + 1
-                    with open("test.json", mode="w", encoding="utf-8") as zapis:
+                    with open("scraping.json", mode="w", encoding="utf-8") as zapis:
                         json.dump(load, zapis, indent=True)
-            """            
+                    sys.stdout.flush()
+                       
             else:
-                print("Uživatel nebyl nalezen")
-                print("Skontroluj te prosím připojeni k internetu")"""
+                print(f"\t{Barvy.FAIL}{Barvy.BOLD}Uživatel nebyl nalezen{Barvy.RESET}\n"\
+                      f"\t{Barvy.FAIL}{Barvy.BOLD}Skontroluj te prosím připojeni k internetu{Barvy.RESET}")
+                
     
         except ConnectionAbortedError as f:
             print(f)
+        except ValueError:
+            print("chybý hodnota")
 
         
     def ret(a):
-        with open("test.json", mode="r", encoding="utf-8") as vypis:
-            data = vypis.read()
-            dec = json.loads(data)
-            
-            #https://from-locals.com/python-file-path/
-            
-            try:
-                
-                Mo.nazev_slozky += dec[0]["owner"]["login"]
-                
-                if a:
-                    for i in range(0, len(dec)):
-                    
-                        print("\n")
-                        
-                        print("\t",dec[i][a])
-                else:
-                    for i in range(0, len(dec)):
-                        
-                        print("Project number: ", i+1)
-                        print("====\n")
-                        print("reposit name: ",dec[i]["description"])
-                        print("clone: ",dec[i]["clone_url"])
-                        print("Language: ", dec[i]["language"])
-                        print("reposit velikost: ",dec[i]["size"]/1024,"Mb")                
-            except KeyError:
-                pass
-                
-            
-    def clon():
-        with open("test.json", mode="r", encoding="utf-8") as vypis:
-            data = vypis.read()
-            dec = json.loads(data)
-            vypis.close()
-            seznam = []
-            
-            #Mo.nazev_slozky += dec[0]["owner"]["login"]
-            
-            for x in range(0, len(dec)):
-                seznam.append(dec[x]["clone_url"])            
-            
-            for i in range(len(seznam)):
-                print("{cislo}) {hodnota}".format(cislo=i,hodnota=seznam[i]))
-            
-            try:
-                volba = int(input("cisl:"))
-                    
-                for radky in seznam[volba]:
-                    sz = seznam[volba]  
-                cesta(nazev=Mo.nazev_slozky, reposit=sz)
-            except ValueError:
-                pass
-            
-        """
-        with open("test.json", mode="r", encoding="utf-8") as vypis:
-            data = vypis.read()
-            dec = json.loads(data)
-            vypis.close()
+
+        with open("scraping.json", mode="r", encoding="utf-8") as prohledni:
+            data = prohledni.read()
+            dec = json.loads(data)                
+            prohledni.close()
+        if a:
             for i in range(0, len(dec)):
-                Mo.seznam_git(dec[i]["clone_url"])
-        soubor = os.path.join(os.path.dirname(os.path.realpath(__file__)), "Reposits")
+                
+                print("\n")
+                
+                print(f"\t{Barvy.BOLD}\t",dec[i][a],flush=True)
+        
+        elif not a:
+            for i in range(0, len(dec)):
+                print("\t====\n")
+                
+                print(f"\t{Barvy.BOLD}Project number: ", i+1,f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}Reposit name: ",dec[i]["name"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tLogin: ", dec[i]["owner"]["login"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tDescription: ",dec[i]["description"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tUrl: ", dec[i]["html_url"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tClone:",dec[i]["clone_url"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tLanguage: ", dec[i]["language"],f"{Barvy.RESET}")
+                print(f"\t{Barvy.BOLD}\tReposit size: ",dec[i]["size"]/1024,"Mb",f"{Barvy.RESET}") 
+            prohledni.close
+        else:
+            pass
+        sys.stdout.flush()
+        
         
             
-        for soubory in os.listdir(soubor):
-            # kontrola zda slozka se jmenem od funkce do_set()
-            if os.path.exists(os.path.join(soubor, uzivatel)):
-                print("ok")
-                # po kontrole souboru bude stahovat 
-                down = os.system("git clone {path} {git}".format(git=Mo.seznam_git(), path=os.path.join(soubor,uzivatel)))
-            # slozka nebyla nalezena, vytvorise a stazeni probehne 
+    def clon():
+        with open("scraping.json", mode="r", encoding="utf-8") as stahni:    
+            data = stahni.read()
+            dec = json.loads(data)
+            Login = dec[0]["owner"]["login"]
+            pocet = len(dec[0]["owner"]["login"])
+            if pocet > len(Mo.nazev_slozky) and Login != Mo.nazev_slozky:
+                del Mo.nazev_slozky
+                Mo.nazev_slozky = Login
+                print(f"{Barvy.BOLD}Jmeno složky> {Barvy.slozka}{Mo.nazev_slozky}{Barvy.RESET}",flush=True)
             else:
-                os.mkdir(os.path.join(soubor, uzivatel))
-                print("byl vytroven..")  
-                down = os.system("git clone {git} {path}".format(git=" ", path=os.path.join(soubor,uzivatel)))
-               """
+                del Mo.nazev_slozky
+                Mo.nazev_slozky = Login                
+                print(f"{Barvy.BOLD}Jmeno složky> {Barvy.slozka}{Mo.nazev_slozky}{Barvy.RESET}",flush=True)
+                
+            
+            
+            stahni.close()  
+            sys.stdout.flush()
+            
+        seznam = [] 
+         
+        
+       
+        for x in range(0, len(dec)):    
+            seznam.append(dec[x]["clone_url"])            
+            
+        for i in range(len(seznam)):
+            
+            print("\t{barva}{cislo}) {hodnota}{reset}".format(barva=Barvy.BOLD,cislo=i,hodnota=seznam[i],reset=Barvy.RESET, flush=True))
+            
+        try:
+            
+            volba = int(input(f"{Barvy.CURSIVA}{Barvy.BOLD} čislo:"))
+                    
+            for radky in seznam[volba]:
+                sz = seznam[volba]  
+            cesta(nazev=Mo.nazev_slozky, reposit=sz)
+            sys.stdout.flush()
+        except KeyboardInterrupt:
+            pass
+        except ValueError:
+            pass
+         
+            
+    
     def lis(uprava):
         mezery = uprava.split()
-        I_data = []
         return [Mo.ret(a=x) for x in mezery]
-    """
-    for i in range(len(uprava)):
-    if len(uprava) < 1:
-        print("mam jeden: ", i)
-    elif len(uprava) >= 2:
-        print("mam dva a vice ", i)"""
+    
