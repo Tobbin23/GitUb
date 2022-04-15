@@ -12,8 +12,8 @@ cd GitUb
 python3 GitUb.py
 ```
 <div style="width:60px ; height:60px">
-![hlavni](https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png)
-<div>
+  ![hlavni](https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png)
+</div>
 
 <h4> Help </h4>
 
