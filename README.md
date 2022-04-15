@@ -25,6 +25,8 @@ python3 GitUb.py
 <p>S argumenty vytiskne požedované hodnoty</p>
 <img src="https://user-images.githubusercontent.com/67708830/163579969-d5a52681-ddaa-4ebf-8a29-040354097f87.png"
 width="520"/>
+
+
 | Argumenty | Hodnoty |
 | --- | --- |
 | name | názvy programů |
