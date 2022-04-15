@@ -1,7 +1,7 @@
 <h1 align="center"> GitUb</h1>
 
- GitUb slouží pro získání informací účtu uživatele na github.com
- Rychlejší stahování souborů na místo ručního stahování
+ <p>GitUb slouží pro získání informací účtu uživatele na github.com<br>
+ </br>Rychlejší stahování souborů na místo ručního stahování
  Nelze však zobrazit zdrojový kód před stažením
  Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb
 
