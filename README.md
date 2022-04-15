@@ -31,3 +31,13 @@ width="520"/>
 
 Pokud mě chcete podpořit a přitom i získat 10$ v BTC použijte prosím tento referrl link:
 [Referral-Coinbase](https://www.coinbase.com/join/szava_j?src=android-link)
+
+Nebo přímo poslat crpyto na peněženku:
+| Crpytoměny | Adresa |
+| --- | --- |
+| Bitcoin (BTC) | ![btc](https://user-images.githubusercontent.com/67708830/163583376-c3c61675-0204-4b3d-9610-895442895473.jpeg) |
+
+| Ethereum (ETH) |
+| Litecoin (LTC) |
+| Algorand (ALGO) | 
+
