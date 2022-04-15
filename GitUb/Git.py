@@ -53,12 +53,14 @@ class Mo:
             dec = json.loads(data)                
             prohledni.close()
         if a:
+            
             for i in range(0, len(dec)):
+                if a in dec[i]:
+                    print("\n")
                 
-                print("\n")
-                
-                print(f"\t{Barvy.BOLD}\t",dec[i][a],flush=True)
-        
+                    print(f"\t{Barvy.BOLD}\t",dec[i][a],flush=True)
+                else:
+                    pass
         elif not a:
             for i in range(0, len(dec)):
                 print("\t====\n")
