@@ -6,7 +6,7 @@
 <p> Nelze však zobrazit zdrojový kód před stažením<br>
  Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb</br></p>
 
-### Stažení:
+#### Stažení:
 ´´´bash
 git clone https://github.com/Tobbin23/GitUb.git
 cd GitUb
