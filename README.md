@@ -45,8 +45,9 @@ width="520"/>
 | description | popisek |
 
 <h4> clone (stažení) </h4>
-<img src="https://user-images.githubusercontent.com/67708830/163586730-c14eb6c9-a3d9-4aea-a0c8-71de9c7db130.png"
+<img src="https://user-images.githubusercontent.com/67708830/163588370-acd16c4f-420a-4926-bac2-963540c8c845.png"
  width="520"/>
+
 
 
 *Veškeré stažené soubory naleznete ve složce Reposits
