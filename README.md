@@ -11,4 +11,4 @@
 
 <h4> Help </h4>
 
-![napoveda](https://user-images.githubusercontent.com/67708830/163554970-2818af32-e84f-4611-8353-3ba57071f72b.png)
+![napoveda](https://user-images.githubusercontent.com/67708830/163555712-82bf35e7-f967-42ef-a059-00893a376410.png)
