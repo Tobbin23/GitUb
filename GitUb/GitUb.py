@@ -3,11 +3,11 @@
 autor Tobbin23
 """
 from cmd import Cmd
-from barvy import Barvy
+
 from os import system
 import sys
 from Git import Mo
-from autor import logo_a,logo_b
+from src.autor import logo_a,logo_b
 
 class GitUb(Cmd):
     

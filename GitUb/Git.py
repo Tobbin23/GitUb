@@ -6,10 +6,10 @@ from requests import get
 import json
 import os
 import sys
-from barvy import Barvy
+from src.barvy import Barvy
 from spravce import cesta
-from autor import logo_b
-from user_agent import user
+from src.autor import logo_b
+from src.user_agent import user
 """
 Vytrorit script pro jednodusi stahovani programu z github.
 misto manualniho otevirani stranek a klikani na copy reposit.
@@ -117,6 +117,7 @@ class Mo:
                     
             for radky in seznam[volba]:
                 sz = seznam[volba]  
+            #cesta(nazev=Mo.nazev_slozky, reposit=sz)
             cesta(nazev=Mo.nazev_slozky, reposit=sz)
             sys.stdout.flush()
         except KeyboardInterrupt:
