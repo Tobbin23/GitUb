@@ -1,6 +1,6 @@
 [Desktop Entry]
-Icon=/home/arkab/Plocha/GitUb/icon/icon.ico
-Exec=python3 /home/arkab/Plocha/GitUb/GitUb.py
+Icon=/home/User/Plocha/GitUb/icon/icon.ico
+Exec=python3 /home/User/Plocha/GitUb/GitUb.py
 Terminal=true
 Type=Application
 Categories=None;
