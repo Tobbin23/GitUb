@@ -1,2 +1,0 @@
-
-# tento soubor klidne smazte
