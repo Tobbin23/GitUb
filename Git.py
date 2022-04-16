@@ -6,6 +6,7 @@ from requests import get
 import json
 import os
 import sys
+import subprocess
 from src.barvy import Barvy
 from spravce import cesta
 from src.autor import logo_b
@@ -126,7 +127,24 @@ class Mo:
             pass
          
             
+    def posledni_verse(verse):
+        with open("version.txt", mode="r") as autor:
+            if autor.read() != verse:
+                return True
+            else:
+                return False
+    def update():
+        zjisti = get("https://raw.githubusercontent.com/Tobbin23/GitUb/main/version.txt").text
     
+        if Mo.posledni_verse(zjisti) is True:
+            #os.system("git pull https://github.com/Tobbin23/GitUb.git")
+            subprocess.call(["git", "pull", "origin", "master"])
+            #os.system("git pull origin master")
+            
+            print(f"\t{Barvy.WARNING}Probýhá update {zjisti}{Barvy.RESET}")
+        else:
+            print(f"\t{Barvy.OK}Není třeba atkuální verse {zjisti}{Barvy.RESET}")
+            
     def lis(uprava):
         mezery = uprava.split()
         return [Mo.ret(a=x) for x in mezery]

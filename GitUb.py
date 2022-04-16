@@ -11,7 +11,8 @@ from src.autor import logo_a,logo_b
 
 class GitUb(Cmd):
     
-    
+    def do_update(self, update):
+        Mo.update()
     def do_set(self, uzivate ):
         
         if len(uzivate) < 0:
