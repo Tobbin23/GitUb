@@ -1,9 +1,0 @@
-[Desktop Entry]
-Icon=/home/user/Plocha/GitUb/icon/icon.ico
-Exec=python3 /home/user/Plocha/GitUb/GitUb.py
-Terminal=true
-Type=Application
-Categories=None;
-StartupNotify=false
-Name[cs]=GitUb
-
