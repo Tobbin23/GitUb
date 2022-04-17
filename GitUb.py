@@ -13,14 +13,14 @@ class GitUb(Cmd):
     
     def do_update(self, update):
         Mo.update()
+        
+    def help_update(self):
+        print("\t Zjistí aktuální verzi programu.\n"\
+              "\tV případě nové verze aktualizuje program.")        
     def do_set(self, uzivate ):
         
         if len(uzivate) < 0:
             return False
-        elif uzivate.startswith("--help"):
-            return "ZADEJ jmeno"
-        
-       
         
         Mo.se_t(jmeno=uzivate)
     def help_set(self):
@@ -81,3 +81,8 @@ def start_GitUb():
 if __name__=="__main__":
     start_GitUb()
     
+except KeyboardInterrupt as K:
+    pass
+    
+except KeyError as E:
+    pass
