@@ -141,7 +141,7 @@ class Mo:
             
             print(f"\t{Barvy.WARNING}Probýhá update {zjisti}{Barvy.RESET}")
             
-            subprocess.call(["git", "pull", "origin"])
+            subprocess.call(["git", "pull"])
             
         else:
             print(f"\t{Barvy.OK}Není třeba atkuální verse {zjisti}{Barvy.RESET}")
