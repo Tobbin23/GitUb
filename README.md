@@ -15,11 +15,13 @@ python3 GitUb.py
 ```bash
 # absolutní cesta ke složce GitUb
 $ pwd
+# cestu kopírujte a vložte před /home/ a za /icon/icon.ico
+# cestu kopírujte a vložte před /home/ a za /GitUb.py
 $ nano GitUb.desktop
 
 [Desktop Entry]
-Icon=/home/User/Plocha/GitUb/icon/icon.ico
-Exec=python3 /home/User/Plocha/GitUb/GitUb.py
+Icon=/home/ /Plocha/GitUb/icon/icon.ico
+Exec=python3 /home/ /Plocha/GitUb/GitUb.py
 Terminal=true
 Type=Application
 Categories=None;
