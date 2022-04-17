@@ -128,20 +128,21 @@ class Mo:
          
             
     def posledni_verse(verse):
-        with open("version.txt", mode="r") as autor:
-            if autor.read() != verse:
+        with open("src/autor.py", mode="r", encoding="utf-8") as autor:
+            kontrola = autor.read()
+            if kontrola != verse:
                 return True
             else:
                 return False
     def update():
         zjisti = get("https://raw.githubusercontent.com/Tobbin23/GitUb/main/version.txt").text
     
-        if Mo.posledni_verse(zjisti) is True:
-            #os.system("git pull https://github.com/Tobbin23/GitUb.git")
-            subprocess.call(["git", "pull", "origin", "master"])
-            #os.system("git pull origin master")
+        if Mo.posledni_verse(verse=zjisti) is True:
             
             print(f"\t{Barvy.WARNING}Probýhá update {zjisti}{Barvy.RESET}")
+            
+            subprocess.call(["git", "pull", "origin", "master"])
+            
         else:
             print(f"\t{Barvy.OK}Není třeba atkuální verse {zjisti}{Barvy.RESET}")
             
