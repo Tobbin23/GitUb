@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 from .barvy import Barvy
+import urllib.request
+#https://github.com/4w4k3/KnockMail/blob/master/updater.py
 def logo_a():
 	__autor__= "Tobbin23"
-	__version__ = 2.2	
+	__version__= 1.4
 	print( f"""
 	
 
