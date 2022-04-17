@@ -11,6 +11,24 @@ git clone https://github.com/Tobbin23/GitUb.git
 cd GitUb
 python3 GitUb.py
 ```
+
+```bash
+# absolutní cesta ke složce GitUb
+$ pwd
+$ nano GitUb.desktop
+
+[Desktop Entry]
+Icon=/home/User/Plocha/GitUb/icon/icon.ico
+Exec=python3 /home/User/Plocha/GitUb/GitUb.py
+Terminal=true
+Type=Application
+Categories=None;
+StartupNotify=false
+Name[cs]=GitUb
+
+uložení Ctrl o | zavření Ctrl x
+
+```
 <img src="https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png" width="520" />
 
 <h4> Help </h4>
