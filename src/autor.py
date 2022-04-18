@@ -16,7 +16,7 @@ def logo_a():
 	╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═════╝{Barvy.RESET} 
 		{Barvy.BOLD}{Barvy.UNDLINE}Autor   | {__autor__}{Barvy.RESET}
 	        {Barvy.BOLD}{Barvy.UNDLINE}Version | {__version__}{Barvy.RESET}
-         
+        __ 
 	""")
 def logo_b():
 	print(f"""
