@@ -128,14 +128,14 @@ class Mo:
          
             
     def posledni_verse(verse):
-        with open("src/autor.py", mode="r", encoding="utf-8") as autor:
+        with open("verze.txt", mode="r", encoding="utf-8") as autor:
             kontrola = autor.read()
             if kontrola != verse:
                 return True
             else:
                 return False
     def update():
-        zjisti = get("https://raw.githubusercontent.com/Tobbin23/GitUb/main/version.txt").text
+        zjisti = get("https://raw.githubusercontent.com/Tobbin23/GitUb/main/verze.txt").text
     
         if Mo.posledni_verse(verse=zjisti) is True:
             
