@@ -80,9 +80,3 @@ def start_GitUb():
    
 if __name__=="__main__":
     start_GitUb()
-    
-except KeyboardInterrupt as K:
-    pass
-    
-except KeyError as E:
-    pass
