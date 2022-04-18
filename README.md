@@ -9,7 +9,7 @@
 ```bash
 git clone https://github.com/Tobbin23/GitUb.git
 cd GitUb
-# Tím se vytoří spouštěč
+# Vytoříme spouštěč.
 python3 instalace.py
 # Dále kliknete na ikonu > vlastnosti > Oprávnění | kliknete na "Povolit tomuto souboru spouštění"
 
