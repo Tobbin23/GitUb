@@ -6,14 +6,26 @@
   Vývojář Tobbin23 nenese žádnou zodpovědnost při stažení souboru přez GitUb.</br></p>
 
 ### Stažení:
+
 ```bash
 git clone https://github.com/Tobbin23/GitUb.git
 cd GitUb
-# Vytoříme spouštěč.
 python3 instalace.py
+```
+
+![stazeni](https://user-images.githubusercontent.com/67708830/163879530-f3a00b0a-31ca-488d-ac57-d567f02fdaa8.png)
+
+```bash
 # Dále kliknete na ikonu > vlastnosti > Oprávnění | kliknete na "Povolit tomuto souboru spouštění"
 
 ```
+
+![desktop](https://user-images.githubusercontent.com/67708830/163879551-45470f3f-8e77-454f-abe4-7b8e204616f2.png)
+
+
+![spoustec](https://user-images.githubusercontent.com/67708830/163879559-387099bb-7155-490e-a09e-ed025205c0ab.png)
+
+
 
 <img src="https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png" width="520" />
 
