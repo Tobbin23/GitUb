@@ -25,6 +25,7 @@ python3 instalace.py
 
 ![spoustec](https://user-images.githubusercontent.com/67708830/163879559-387099bb-7155-490e-a09e-ed025205c0ab.png)
 
+![pripraveno](https://user-images.githubusercontent.com/67708830/163880477-9351fba0-0bcc-4036-98e4-fe4d1430060f.png)
 
 
 <img src="https://user-images.githubusercontent.com/67708830/163552521-50d5ab50-459b-4e73-b3d1-48aba434e1f5.png" width="520" />
