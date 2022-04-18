@@ -21,7 +21,7 @@ def instalace(spoustec):
 		"Type=Application\n"\
 		"Categories=None\n"\
 		"StartupNotify=false\n"\
-		"Name[cs]=Inflační Kalkulačka"
+		"Name[cs]=GitUb"
 	with open(spoustec, mode="w") as zapis:
 		zapis.write(codo)
 #instalace()
