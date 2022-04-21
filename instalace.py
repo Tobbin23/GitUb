@@ -1,6 +1,10 @@
 import os
 import subprocess
+from src.barvy import Barvy
+"""
+autor Tobbin23
 
+"""
 def priprava():
 	priprav = os.path.dirname(os.path.realpath(__file__))
 	spustitelny = "GitUb.desktop"
@@ -24,5 +28,6 @@ def instalace(spoustec):
 		"Name[cs]=GitUb"
 	with open(spoustec, mode="w") as zapis:
 		zapis.write(codo)
+	print (f"{Barvy.OK}instalace proběhla úspěšně.{Barvy.RESET}")
 #instalace()
 priprava()
