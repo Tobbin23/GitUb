@@ -24,7 +24,7 @@ class GitUb(Cmd):
         
         Mo.se_t(jmeno=uzivate)
     def help_set(self):
-        print("\tStahne informace z uživatelského účtu a zapíše do scraping.json")
+        print("\tStáhne informace z uživatelského účtu a zapíše do scraping.json")
         
     def do_uset(self, konfig=None):
         
@@ -35,8 +35,8 @@ class GitUb(Cmd):
             
     
     def help_uset(self):
-        print("\tvypíše získané informace: bez parametrů.\n"\
-              "\tPridate-li argument <name> vypíše vse co odpovida argumentu.")
+        print("\tVypíše získané informace: bez parametrů.\n"\
+              "\tPřidáte-li argument <name> vypíše vše co odpovida argumentu.")
     def do_exit(self, exit):
         Cmd(exit)
         sys.stdout.flush()
@@ -57,9 +57,9 @@ class GitUb(Cmd):
         Mo.clon()
         
     def help_clone(self):
-        print("\tUmožní libovolné stažení so složky Reposits \n"\
+        print("\tUmožní libovolné stažení do složky Reposits \n"\
               "\tčíselné označení slouží jako argument\n"\
-              "\tChcete-li stahnout řádek ozn <3) https://> \n"\
+              "\tChcete-li stáhnout řádek ozn <3) https://> \n"\
               "\tpostačí stisknout klavesu 3 a stahování započne.\n"\
               "\n"\
               "\tNechceteli nic stahovat stiskněte klavesu Enter")

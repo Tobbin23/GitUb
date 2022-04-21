@@ -38,13 +38,13 @@ class Mo:
                        
             else:
                 print(f"\t{Barvy.FAIL}{Barvy.BOLD}Uživatel nebyl nalezen{Barvy.RESET}\n"\
-                      f"\t{Barvy.FAIL}{Barvy.BOLD}Skontroluj te prosím připojeni k internetu{Barvy.RESET}")
+                      f"\t{Barvy.FAIL}{Barvy.BOLD}Zkontroluj te, prosím připojeni k internetu{Barvy.RESET}")
                 
     
         except ConnectionAbortedError as f:
             print(f)
         except ValueError:
-            print("chybý hodnota")
+            print("chybí hodnota")
 
         
     def ret(a):
@@ -139,12 +139,12 @@ class Mo:
     
         if Mo.posledni_verse(verse=zjisti) is True:
             
-            print(f"\t{Barvy.WARNING}Probýhá update {zjisti}{Barvy.RESET}")
+            print(f"\t{Barvy.WARNING}Probíhá update {zjisti}{Barvy.RESET}")
             
             subprocess.call(["git", "pull", "origin"])
             
         else:
-            print(f"\t{Barvy.OK}Není třeba atkuální verse {zjisti}{Barvy.RESET}")
+            print(f"\t{Barvy.OK}Není třeba, atkuální verze je: {zjisti}{Barvy.RESET}")
             
     def lis(uprava):
         mezery = uprava.split()
