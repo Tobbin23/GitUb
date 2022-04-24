@@ -114,12 +114,18 @@ class Mo:
             
         try:
             
-            volba = int(input(f"{Barvy.CURSIVA}{Barvy.BOLD} čislo:"))
-                    
-            for radky in seznam[volba]:
-                sz = seznam[volba]  
-            #cesta(nazev=Mo.nazev_slozky, reposit=sz)
-            cesta(nazev=Mo.nazev_slozky, reposit=sz)
+            volba = input(f"{Barvy.CURSIVA}{Barvy.BOLD} čislo:")
+            
+            if volba.isdigit() is True:
+                volba = int(volba)
+                for radky in seznam[volba]:
+                    sz = seznam[volba]  
+                    #cesta(nazev=Mo.nazev_slozky, reposit=sz)
+                cesta(nazev=Mo.nazev_slozky, reposit=sz)
+                
+            elif volba.isdigit() is False:
+                cesta(nazev=Mo.nazev_slozky, reposit=volba)
+                
             sys.stdout.flush()
         except KeyboardInterrupt:
             pass
