@@ -4,7 +4,7 @@ import urllib.request
 #https://github.com/4w4k3/KnockMail/blob/master/updater.py
 def logo_a():
 	__autor__= "Tobbin23"
-	__version__= "1.6"
+	__version__= "1.7"
 	print( f"""
 	
 
