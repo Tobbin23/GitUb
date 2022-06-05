@@ -7,10 +7,12 @@ import json
 import os
 import sys
 import subprocess
+import re
 from src.barvy import Barvy
 from spravce import cesta
 from src.autor import logo_b
 from src.user_agent import user
+
 """
 Vytrorit script pro jednodusi stahovani programu z github.
 misto manualniho otevirani stranek a klikani na copy reposit.
@@ -122,9 +124,15 @@ class Mo:
                     sz = seznam[volba]  
                     #cesta(nazev=Mo.nazev_slozky, reposit=sz)
                 cesta(nazev=Mo.nazev_slozky, reposit=sz)
-                
+            # pridani regex pro nazev_slozky developera
+            # https://github.com/sivel/speedtest-cli.git
+            # stred = re.search(r"/(\w+)/", url)
+            # stred.group(1)
+            
             elif volba.isdigit() is False:
-                cesta(nazev=Mo.nazev_slozky, reposit=volba)
+                vyvojar = re.search(r"/(\w+)/", volba)
+                slozka = vyvojar.group(1)
+                cesta(nazev=slozka, reposit=volba)
                 
             sys.stdout.flush()
         except KeyboardInterrupt:
