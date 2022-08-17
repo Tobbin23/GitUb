@@ -12,7 +12,8 @@ from src.autor import logo_a,logo_b
 class GitUb(Cmd):
     
     def do_update(self, update):
-        Mo.update()
+        
+            Mo.update()
         
     def help_update(self):
         print("\t Zjistí aktuální verzi programu.\n"\
@@ -38,7 +39,6 @@ class GitUb(Cmd):
         print("\tVypíše získané informace: bez parametrů.\n"\
               "\tPřidáte-li argument <name> vypíše vše co odpovida argumentu.")
     def do_exit(self, exit):
-        
         print("ukoncuji relaci")
         time.sleep(1)
         Cmd(exit)
