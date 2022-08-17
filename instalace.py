@@ -17,10 +17,11 @@ def priprava():
 def instalace(spoustec):
 	path_1 = os.path.join(os.path.dirname(os.path.realpath(__file__)),"GitUb.py")
 	path_2 = os.path.join(os.path.dirname(os.path.realpath(__file__)),"icon/icon.ico")
-	
+	path_3 = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 	codo = "[Desktop Entry]\n"\
 		f"Icon={path_2}\n"\
 		f"Exec=python3 {path_1}\n"\
+		f"Path={path_3}\n"\
 		"Terminal=true\n"\
 		"Type=Application\n"\
 		"Categories=None\n"\
