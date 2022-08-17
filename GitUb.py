@@ -3,7 +3,7 @@
 autor Tobbin23
 """
 from cmd import Cmd
-
+import time
 from os import system
 import sys
 from Git import Mo
@@ -38,6 +38,9 @@ class GitUb(Cmd):
         print("\tVypíše získané informace: bez parametrů.\n"\
               "\tPřidáte-li argument <name> vypíše vše co odpovida argumentu.")
     def do_exit(self, exit):
+        
+        print("ukoncuji relaci")
+        time.sleep(1)
         Cmd(exit)
         sys.stdout.flush()
         return True
