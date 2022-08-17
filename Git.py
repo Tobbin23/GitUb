@@ -3,6 +3,7 @@
 autor Tobbin23
 """
 from requests import get
+from requests.auth import HTTPBasicAuth
 import json
 import os
 import sys
@@ -27,7 +28,7 @@ class Mo:
     # 
     def se_t(jmeno):
         try:
-            adresa = get(f"https://api.github.com/users/{jmeno}/repos",headers=user())
+            adresa = get(f"https://api.github.com/users/{jmeno}/starred?page=1&per_page=100",headers=user())
             if adresa.status_code == 200:
                 print("\tSpojení %s %d " % (Barvy.OK, adresa.status_code))
                 
