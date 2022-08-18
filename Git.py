@@ -11,7 +11,7 @@ import subprocess
 import re
 from src.barvy import Barvy
 from spravce import cesta
-from src.autor import logo_b
+from src.autor import logo_b, logo_a
 from src.user_agent import user
 
 """
@@ -131,10 +131,13 @@ class Mo:
             # stred.group(1)
             
             elif volba.isdigit() is False:
-                vyvojar = re.search(r"/(\w+)/", volba)
-                slozka = vyvojar.group(1)
-                cesta(nazev=slozka, reposit=volba)
-                
+                try:
+                    vyvojar = re.search(r"/(\w+)/", volba)
+                    slozka = vyvojar.group(1)
+                    cesta(nazev=slozka, reposit=volba)
+                except:
+                    os.system("clear")
+                    logo_a()
             sys.stdout.flush()
         except KeyboardInterrupt:
             pass
