@@ -136,7 +136,7 @@ class Mo:
                     slozka = vyvojar.group(1)
                     cesta(nazev=slozka, reposit=volba)
                 except:
-			pass
+		    pass
             sys.stdout.flush()
         except KeyboardInterrupt:
             pass
