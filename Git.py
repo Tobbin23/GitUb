@@ -67,17 +67,22 @@ class Mo:
                     pass
         elif not a:
             for i in range(0, len(dec)):
-                print("\t====\n")
-                
-                print(f"\t{Barvy.BOLD}Project number: ", i+1,f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}Reposit name: ",dec[i]["name"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tLogin: ", dec[i]["owner"]["login"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tDescription: ",dec[i]["description"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tUrl: ", dec[i]["html_url"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tClone:",dec[i]["clone_url"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tLanguage: ", dec[i]["language"],f"{Barvy.RESET}")
-                print(f"\t{Barvy.BOLD}\tReposit size: ",dec[i]["size"]/1024,"Mb",f"{Barvy.RESET}") 
-            prohledni.close
+                try:
+                    print("\t====\n")
+                    
+                    print(f"\t{Barvy.BOLD}Project number: ", i+1,f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}Reposit name: ",dec[i]["name"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tLogin: ", dec[i]["owner"]["login"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tDescription: ",dec[i]["description"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tUrl: ", dec[i]["html_url"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tClone:",dec[i]["clone_url"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tLanguage: ", dec[i]["language"],f"{Barvy.RESET}")
+                    print(f"\t{Barvy.BOLD}\tReposit size: ",dec[i]["size"]/1024,"Mb",f"{Barvy.RESET}") 
+                    prohledni.close()
+                except ValueError:
+                    pass
+                except TypeError:
+                    continue
         else:
             pass
         sys.stdout.flush()
