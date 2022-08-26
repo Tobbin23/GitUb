@@ -28,7 +28,7 @@ class Mo:
     # 
     def se_t(jmeno):
         try:
-            adresa = get(f"https://api.github.com/users/{jmeno}/starred?page=1&per_page=100",headers=user())
+            adresa = get(f"https://api.github.com/users/{jmeno}/repos?per_page=",headers=user())
             if adresa.status_code == 200:
                 print("\tSpojení %s %d " % (Barvy.OK, adresa.status_code))
                 
