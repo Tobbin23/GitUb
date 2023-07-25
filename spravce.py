@@ -5,7 +5,7 @@ autor Tobbin23
 import os
 import sys
 
-
+#25.7.2023
 def cesta(nazev:str, reposit:str):
 	
 	sjednoceni = os.path.join(os.path.dirname(os.path.realpath(__file__)),"Reposits",nazev)
